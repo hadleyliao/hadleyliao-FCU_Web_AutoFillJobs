@@ -31,6 +31,15 @@
       ],
       "world": "ISOLATED",
       "run_at": "document_end"
+    },
+    {
+      "js": [
+        "content-scripts/google-forms.js"
+      ],
+      "matches": [
+        "https://docs.google.com/forms/*"
+      ],
+      "run_at": "document_end"
     }
   ]
 }
