@@ -16,9 +16,9 @@
     {
       "js": [
        
-        "contentScripts/utils.js",
-        "contentScripts/workday.js",
-        "contentScripts/autofill.js"
+        "content-scripts/utils.js",
+        "content-scripts/workday.js",
+        "content-scripts/autofill.js"
       ],
       "type": "module",
       "matches": [

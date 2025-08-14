@@ -8,11 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 建構指令
 
-專案位於 `src/` 目錄中，執行指令前需要先進入此目錄：
-
-```bash
-cd src
-```
+專案現在採用標準結構，在根目錄執行指令：
 
 ### 常用指令
 - `npm i` - 安裝相依套件
@@ -23,16 +19,18 @@ cd src
 ## 專案架構
 
 ### 檔案結構
-- `src/vue_src/` - Vue.js 前端原始碼
+- `src/` - Vue.js 前端原始碼
   - `App.vue` - 主應用程式組件，包含所有表單欄位
   - `components/` - 可重用的 Vue 組件
   - `composables/` - Vue 組合式函數
-- `src/public/` - Chrome 擴充功能資源
+  - `assets/` - 靜態資源
+- `public/` - Chrome 擴充功能公開資源
   - `manifest.json` - 擴充功能設定檔
-  - `contentScripts/` - 內容腳本
+  - `content-scripts/` - 內容腳本
     - `autofill.js` - 主要自動填寫邏輯
     - `utils.js` - 工具函數
     - `workday.js` - Workday 平台特定邏輯
+  - `icons/` - 擴充功能圖示
 
 ### 技術堆疊
 - Vue.js 3 (Composition API)
@@ -61,4 +59,4 @@ cd src
 
 ## 建構輸出
 
-執行 `npm run build` 後，建構的擴充功能檔案會輸出到專案根目錄的 `dist/` 資料夾，可直接載入到 Chrome 中進行測試。
+執行 `npm run build` 後，建構的擴充功能檔案會輸出到 `dist/` 資料夾，可直接載入到 Chrome 中進行測試。專案現在採用標準的前端專案結構。
