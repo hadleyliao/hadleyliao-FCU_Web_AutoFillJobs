@@ -13,11 +13,11 @@
     </div>
 </template>
 
-<script lang="ts">
+<script >
 import { ref, watch } from 'vue';
 
-import { useSkills } from '@/composables/Skills.ts';
-import { useWorkExperience } from '@/composables/WorkExperience.ts';
+import { useSkills } from '@/composables/Skills.js';
+import { useWorkExperience } from '@/composables/WorkExperience.js';
 import { useResumeDetails } from '@/composables/ResumeDetails';
 export default {
     props: ['content', 'isLast', 'type'],
@@ -45,7 +45,7 @@ export default {
                     if (props.type == "Work Experience" && res.experiences) {
                         let employer = props.content.split('@')[1].trim();
                         let job = props.content.split('@')[0].trim();
-                        res.experiences = res.experiences.filter((exp: any) => (exp.jobEmployer != employer && exp.jobTitle != job));
+                        res.experiences = res.experiences.filter((exp) => (exp.jobEmployer != employer && exp.jobTitle != job));
                         chrome.storage.local.set({ ['Resume_details']: res }, () => {
                             console.log(`'Resume_details' saved:`);
                             loadDetails();

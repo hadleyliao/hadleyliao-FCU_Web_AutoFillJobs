@@ -23,10 +23,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, watch } from 'vue';
 import { usePrivacy } from '@/composables/Privacy';
-import { useExplanation } from '@/composables/Explanation.ts';
+import { useExplanation } from '@/composables/Explanation.js';
 import { useResumeDetails } from '@/composables/ResumeDetails';
 export default {
   props: ['label', 'placeHolder', 'explanation'],
@@ -54,13 +54,13 @@ export default {
       toggleExplanation();
     }
 
-    const saveResume = (event: Event) => {
-      const file = (event.target as HTMLInputElement).files?.[0];
+    const saveResume = (event) => {
+      const file = event.target.files?.[0];
       if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
           if (!e.target?.result) return;
-          const b64 = (e.target.result as string).split(',')[1];
+          const b64 = e.target.result.split(',')[1];
           chrome.storage.local.set({ [`${props.label + '_name'}`]: file.name }, () => {
             inputValue.value = file.name
             console.log(`${props.label} + _name saved:`, file.name);

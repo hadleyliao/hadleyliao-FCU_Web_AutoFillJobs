@@ -11,7 +11,7 @@ export function useExplanation() {
         document.body.style.overflowY = 'scroll';
     }
   };
-  const setExplanation = (value:string) => {
+  const setExplanation = (value) => {
     explanationContent.value = value;
   };
   return {

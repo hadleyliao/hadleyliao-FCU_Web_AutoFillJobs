@@ -7,7 +7,7 @@ export function usePrivacy() {
   const togglePrivacy = () => {
     privacy.value = !privacy.value;
   };
-  const setPrivacy = (value:boolean) => {
+  const setPrivacy = (value) => {
     privacy.value = value;
   };
  

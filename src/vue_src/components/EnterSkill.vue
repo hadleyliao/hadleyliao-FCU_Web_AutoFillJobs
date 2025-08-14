@@ -17,10 +17,10 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref } from 'vue';
 import { useResumeDetails } from '@/composables/ResumeDetails';
-import { useSkills } from '@/composables/Skills.ts';
+import { useSkills } from '@/composables/Skills.js';
 export default {
 
     setup() {

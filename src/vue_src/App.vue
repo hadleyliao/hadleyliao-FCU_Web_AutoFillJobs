@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 //Component imports
 import InputField from '@/components/InputField.vue';
 import GridDataField from '@/components/GridDataField.vue';

@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<script lang="ts">
+<script >
 import { ref, watch } from 'vue';
 import GridDataItem from '@/components/GridDataItem.vue';
 import { useResumeDetails } from '@/composables/ResumeDetails';
@@ -27,12 +27,12 @@ export default {
         const dataRef = ref([]);
         const { details } = useResumeDetails();
 
-        watch(details, (newData: any) => {
+        watch(details, (newData) => {
             console.log(newData)
             dataRef.value = props.label == "Work Experience" ? parseExperience(newData.experiences) : newData.skills;
         });
-        const parseExperience = (experiences: any) => {
-            let returnArr = <string[]>[];
+        const parseExperience = (experiences) => {
+            let returnArr = [];
             for (let experience of experiences) {
                 returnArr.push(`${experience.jobTitle} @ ${experience.jobEmployer}`)
             }

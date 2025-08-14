@@ -6,9 +6,9 @@
     </div>
 </template>
 
-<script lang="ts">
+<script >
 import { ref, watch } from 'vue';
-import { useExplanation } from '@/composables/Explanation.ts';
+import { useExplanation } from '@/composables/Explanation.js';
 export default {
 
     setup() {

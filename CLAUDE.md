@@ -18,7 +18,6 @@ cd src
 - `npm i` - 安裝相依套件
 - `npm run dev` - 啟動開發伺服器
 - `npm run build` - 建構生產版本 (輸出到 `../dist/`)
-- `npm run type-check` - TypeScript 類型檢查
 - `npm run watch` - 監看 vue_src 目錄變化並自動建構
 
 ## 專案架構
@@ -37,7 +36,7 @@ cd src
 
 ### 技術堆疊
 - Vue.js 3 (Composition API)
-- TypeScript
+- JavaScript
 - Vite (建構工具)
 - Chrome Extensions Manifest V3
 

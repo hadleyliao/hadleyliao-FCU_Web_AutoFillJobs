@@ -76,9 +76,9 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, watch } from 'vue';
-import { useWorkExperience } from '@/composables/WorkExperience.ts';
+import { useWorkExperience } from '@/composables/WorkExperience.js';
 import { useResumeDetails } from '@/composables/ResumeDetails';
 export default {
 

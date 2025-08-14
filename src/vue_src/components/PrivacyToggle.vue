@@ -14,7 +14,7 @@
   </button>
 </template>
 
-<script lang="ts">
+<script >
 import { usePrivacy } from '@/composables/Privacy';
 export default {
 
